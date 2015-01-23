@@ -14,11 +14,11 @@ systems({
     command: "# command to run app",
     wait: {"retry": 20, "timeout": 1000},
     mounts: {
-      '/azk/#{manifest.dir}': path(".", {vbox: true}),
-    },
-    envs: {
-      // set instances variables
-      EXAMPLE: "value",
+      // For virtualbox shared folder test
+      // '/azk/#{manifest.dir}': path(".", {vbox: true}),
+
+      // For other file sharing, usual mount configuration
+      '/azk/#{manifest.dir}': path("."),
     },
   },
 });
